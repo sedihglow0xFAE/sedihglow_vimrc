@@ -9,15 +9,24 @@
 # if .vimrc exists, store it somewhere in case they want to revert
 #	- have a functionality to revert?? If reasonable.
 
+# NOTE: This came up using git for windows, .vim is typically there in linux
+if [[ -e !"$HOME/.vim" ]]; then
+fi
+
 # Check if home dir .vimrc exists
+# If the .vimrc is in place. the installer was likely ran to place it and its
+# related files, handle the case where it was not done by the installer aswell.
 if [[ -e "$HOME/.vimrc" ]]; then
-	echo "~/.vimrc already exists"
+	echo "~/.vimrc already exists, removing for reinstall"
 
 	# get user input to confirm what to do about overwriting/storing BU etc.
 	# Perhaps have a choice to add specific functions from func_inc using
 	# flags or some shit
 	# till then:
 	rm -f ~/.vimrc \
+
+
+
 	      ~/.vim/vimrc_files/.makefile_vimrc.vim \
 	      ~/.vim/vimrc_files/.dflt_set_cmds_vimrc.vim \
 	      ~/.vim/vimrc_files/.syn_hi_vimrc.vim \
