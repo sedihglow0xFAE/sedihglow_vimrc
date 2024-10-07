@@ -1,0 +1,39 @@
+---
+
+limiting the text width in a more automated way.
+
+- TODO WITH NOTES: can make small adjustments or scripts for particular
+  languages, for example make it wrap but if its a string in C
+  start the next line under the above's '"' and go to that point automatically
+  on the textwidth limit so i dont have to make hte whitespace and line up the
+  code neat as manually
+  first '"', and the first line with a ' "' and place the wrapped text after
+  the second lines auto inserted '"'.
+(I added the TODO string late, see what i mean... ", for example")
+
+Vim Documentation:
+	https://vimhelp.org/
+
+Vim src:
+	./runtime/doc/
+	./runtime/doc/
+---
+
+:set wrap
+changed how displayed.  It doesn't change the text buffer, see 'textwidth' for that.
+
+
+
+To make scrolling horizontally a bit more useful, try this: >
+		:set sidescroll=5
+		:set listchars+=precedes:<,extends:>
+	See 'sidescroll', 'listchars' and |wrap-off|.
+	This option can't be set from a |modeline| when the 'diff' option is
+
+
+The line will be broken in the middle of a word if necessary.  See
+'linebreak' to get the break at a word boundary.
+
+--------------
+
+'linebreak'

@@ -1,0 +1,12 @@
+/*
+ * These are some notes that hopefully lays out what files to run and edit
+ * in what order to manually adjust the vim build with everything desired
+ * enabled or disabled.
+ */
+
+---- See notes from ./install_doc_notes.txt along side this.
+
+- First understanding going through docs so
+make - runs configure
+make - second run will build the thing
+make install - install the thing.
