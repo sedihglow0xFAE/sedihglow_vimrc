@@ -21,9 +21,9 @@ INSTALL_FILE_NAMES=(
 	".makefile_vimrc.vim"
 	".dflt_set_cmds_vimrc.vim"
 	".syn_hi_vimrc.vim"
-        ".txt_vimrc.vim"
-        ".c_vimrc.vim"
-        ".py_vimrc.vim"
+	".txt_vimrc.vim"
+	".c_vimrc.vim"
+	".py_vimrc.vim"
 	"func_inc.vim"
 	"packadd_includes.vim" 
 )

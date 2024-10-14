@@ -11,15 +11,17 @@
 
 " NOTE: This resolved to ~/.vim/vimrc_files/func_inc.vim (symlink) at first.
 
-let res_ex_script = resolve(expand("<script>"))
-let res_ex_p = resolve(expand("<script>:p"))
-let res_ex_h = resolve(expand("<script>:h"))
-let res_ex_ph = resolve(expand("<script>:p:h"))
+let ex_script     = expand("<script>")
+let res_ex_script = resolve(ex_script)
 
-let ex_script = expand("<script>")
-let ex_p  = expand("<script>:p")
-let ex_h = expand("<script>:h")
-let ex_ph = expand("<script>:p:h")
+let ex_p     = expand("<script>:p")
+let res_ex_p = resolve(ex_p)
+
+let ex_h     = expand("<script>:h")
+let res_ex_h = resolve(ex_h)
+
+let ex_ph     = expand("<script>:p:h")
+let res_ex_ph = resolve(ex_ph)
 
 let gl_rep  = glob('~/git_repos/vim_files/scripts_vim/*.vim')
 let gl_home = glob('~/.vim/vimrc_files/*.vim')
@@ -31,14 +33,12 @@ let gl_home = glob('~/.vim/vimrc_files/*.vim')
 
 echo "--- printouts of stuff resolving and expanding and things ---\n"
 	\ "ex(script)          -> "  ex_script     "\n"
-	\ "res(ex(script))     -> "  res_ex_script "\n"
+	\ "res(ex(script))     -> "  res_ex_script "\n\n"
 	\ "ex(script:p)        -> "  ex_p          "\n"
-	\ "res(ex(script:p))   -> "  res_ex_p      "\n"
+	\ "res(ex(script:p))   -> "  res_ex_p      "\n\n"
 	\ "ex(script:h)        -> "  ex_h          "\n"
-	\ "res(ex(script:h))   -> "  res_ex_h      "\n"
+	\ "res(ex(script:h))   -> "  res_ex_h      "\n\n"
 	\ "ex(script:p:h)      -> "  ex_ph         "\n"
-	\ "res(ex(script:p:h)) -> "  res_ex_ph     "\n"
+	\ "res(ex(script:p:h)) -> "  res_ex_ph     "\n\n"
 	\ "gl_rep              -> "  gl_rep        "\n"
 	\ "gl_home             -> "  gl_home       "\n"
-
-source 
